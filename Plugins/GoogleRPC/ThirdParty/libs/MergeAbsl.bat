@@ -1,0 +1,20 @@
+lib.exe /out:absl_core.lib ^
+absl_bad_optional_access.lib ^
+absl_base.lib ^
+absl_graphcycles_internal.lib ^
+absl_int128.lib ^
+absl_malloc_internal.lib ^
+absl_raw_logging_internal.lib ^
+absl_spinlock_wait.lib ^
+absl_stacktrace.lib ^
+absl_status.lib ^
+absl_statusor.lib ^
+absl_str_format_internal.lib ^
+absl_strings.lib ^
+absl_strings_internal.lib ^
+absl_symbolize.lib ^
+absl_synchronization.lib ^
+absl_throw_delegate.lib ^
+absl_time_zone.lib ^
+absl_time.lib ^
+absl_cord.lib ^

@@ -26,6 +26,11 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	void RequestMessage(const FString& Message);
+
+	void OnReply(const FString &Reply);
+	
+	UFUNCTION(BlueprintImplementableEvent, DisplayName = "OnReply")
+	void Receive_OnReply(const FString& Reply);
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

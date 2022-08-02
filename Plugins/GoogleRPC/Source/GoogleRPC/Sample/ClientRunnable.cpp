@@ -24,7 +24,10 @@ void FClientRunnable::RequestMessage(const FString& Message)
 		std::string user(TCHAR_TO_UTF8(*Message));
 		FString Reply = m_client->SayHello(user).c_str();
 
-		AsyncTask(ENamedThreads::GameThread, [=](){GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Blue, Reply);});
+		AsyncTask(ENamedThreads::GameThread, [=]()
+		{
+			RPCDelegate.ExecuteIfBound(Message);
+		});
 	}
 }
 

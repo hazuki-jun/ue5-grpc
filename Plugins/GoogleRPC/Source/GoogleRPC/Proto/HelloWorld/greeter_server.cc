@@ -63,6 +63,7 @@ class GreeterService
 public:
   GreeterService(){}
   static void RunServer() {
+    if (server) return;
     std::string server_address("0.0.0.0:50051");
     GreeterServiceImpl service;
 

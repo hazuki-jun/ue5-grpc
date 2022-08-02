@@ -5,6 +5,9 @@
 class GOOGLERPC_API FRPCRunnable : FRunnable
 {
 public:
+	DECLARE_DELEGATE_OneParam(FRPCDelegate, const FString&)
+	FRPCDelegate RPCDelegate;
+	
 	FRPCRunnable();
 	FRPCRunnable(const FString& InThreadName);
 

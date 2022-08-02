@@ -32,6 +32,7 @@ void AUTestClientActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
 void AUTestClientActor::RunClient()
 {
 	ClientRunnable = FClientRunnable::Create<FClientRunnable>("ClientRunnable");
+	ClientRunnable->RPCDelegate.BindUObject(this, &ThisClass::OnReply);
 }
 
 void AUTestClientActor::RequestMessage(const FString& Message)
@@ -40,6 +41,12 @@ void AUTestClientActor::RequestMessage(const FString& Message)
 	{
 		ClientRunnable->RequestMessage(Message);
 	}
+}
+
+void AUTestClientActor::OnReply(const FString& Reply)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Blue, Reply);
+	Receive_OnReply(Reply);
 }
 
 // Called every frame

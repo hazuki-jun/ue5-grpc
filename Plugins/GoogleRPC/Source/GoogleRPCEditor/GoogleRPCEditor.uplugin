@@ -2,8 +2,8 @@
 	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
-	"FriendlyName": "GoogleRPC",
-	"Description": "gRPC for ue",
+	"FriendlyName": "GoogleRPCEditor",
+	"Description": "grpc for ue5",
 	"Category": "Other",
 	"CreatedBy": "hatsuki",
 	"CreatedByURL": "",
@@ -14,16 +14,11 @@
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
-	"SupportedTargetPlatforms": ["Win64"],
 	"Modules": [
 		{
-			"Name": "GoogleRPC",
+			"Name": "GoogleRPCEditor",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "GoogleRPCEditor",
-			"Type": "Editor"
 		}
 	]
 }
